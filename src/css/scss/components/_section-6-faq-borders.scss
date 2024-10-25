@@ -1,0 +1,20 @@
+@include tablet {
+    .border-faq {
+        padding-block: 1rem;
+        padding-inline: 1.5rem;
+        display: flex;
+        box-shadow: $dropshadow-primary;
+
+        @include tablet {
+            background-color: var(--clr-SpWhite);
+        }
+    }
+}
+
+@include mobile {
+    .border-faq-cont {
+        border: 1px solid var(--clr-GraySp-7);
+        padding-inline: 1.5rem;
+        background-color: var(--clr-mb-faq-bg);
+    }
+}

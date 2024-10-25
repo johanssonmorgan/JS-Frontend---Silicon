@@ -1,0 +1,7 @@
+.app-features-image{
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}

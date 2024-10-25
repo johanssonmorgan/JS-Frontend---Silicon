@@ -1,0 +1,19 @@
+.nav-links {
+    display: none;
+    
+    @include desktop {
+        display: contents;
+    }
+
+    .features{
+        grid-area: features;
+    }
+
+    .contact{
+        grid-area: contact;
+    }
+
+    .sign-in {
+        grid-area: nav-sign-in;
+    }
+}

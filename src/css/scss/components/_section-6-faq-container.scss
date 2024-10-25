@@ -1,0 +1,91 @@
+@import "./section-6-faq-borders";
+
+.p6-faq-cont {
+    grid-area: p6-faq-cont;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+
+    .faq-1-closed {
+        display: none;
+    }
+
+    .faq-3-opened {
+        // display: none;
+    }
+
+    @include tablet {
+        gap: 1rem;
+
+        .faq-1-closed {
+            display: flex;
+        }
+
+        .faq-1-opened {
+            display: none;
+        }
+
+        .faq-3-closed {
+            display: none;
+        }
+
+        .faq-3-opened {
+            display: flex;
+        }
+    }
+
+    @include desktop {
+        gap: 1rem;
+    }
+}
+
+
+.faq {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-open {
+    display: flex;
+    flex-direction: column;
+}
+
+@include mobile {
+
+    .faq-3-opened {
+        padding-block: 1rem;
+    }
+    
+    .faq-divider-top {
+        border-radius: 0;
+        border-top: 1px solid var(--clr-GraySp-7);
+        padding-block: 1rem;
+    }
+}
+
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 200ms;
+}
+
+.open .faq-answer {
+    grid-template-rows: 1fr;
+    padding-top: 1rem;
+}
+
+.expandable {
+    min-height: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.open .btn-open {
+    background-color: $Primary;
+    @include color-adjustments-bg($Primary);
+    rotate: 180deg;
+}

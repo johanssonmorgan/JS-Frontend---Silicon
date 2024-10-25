@@ -1,0 +1,13 @@
+.user-avatar {grid-area: user-avatar;}
+.user-name {grid-area: user-name;}
+.user-title {grid-area: user-title;}
+
+
+.user {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "user-avatar user-name"
+    "user-avatar user-title";
+}

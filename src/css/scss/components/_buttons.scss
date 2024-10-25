@@ -1,0 +1,100 @@
+@import "./dark-mode-toggle";
+
+.btn-primary {
+    @include btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Primary;
+    border-radius: .25em;
+    padding: .5em 1.5625em;
+    @include color-adjustments-bg($Primary);
+}
+
+.btn-burger {
+    @include btn;
+
+    @include desktop {
+        display: none;
+    }
+}
+
+.btn-contact {
+    @include btn;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-app {
+    @include btn;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background-color: var(--clr-GraySp-4);
+    border-radius: .5em;
+    padding: .5em 1.5625em;
+    z-index: 1;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--clr-GraySp-4-hover);
+        
+        @include desktop {
+            background-color: var(--clr-GraySp-5-hover);
+        }
+    }
+
+    &:active {
+            background-color: var(--clr-GraySp-4-active);
+            
+        @include desktop {
+            background-color: var(--clr-GraySp-5-active);
+        }
+    }
+    }
+
+    .btn-submit {
+        @include btn;
+        background-color: $Primary;
+        color: $White;
+        padding: 1em;
+        border-radius: 0 .5em .5em 0;
+        font-size: 1rem;
+        border: 1px solid $Primary;
+        @include color-adjustments-bg($Primary)
+    }
+
+    .btn-discover {
+        @include btn-circle-large;
+        background-color: var(--clr-SpWhite);
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--clr-SpWhite-hover);
+        }
+
+        &:active {
+            background-color: var(--clr-SpWhite-active);
+        }
+    }
+
+    .btn-open {
+        @include btn-circle-small;
+        background-color: var(--clr-Gray100);
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--clr-Gray100-hover);
+        }
+
+        &:active {
+            background-color: var(--clr-Gray100-active);
+        }
+    }
+
+    .btn-close {
+        @include btn-circle-small;
+        background-color: $Primary;
+        @include color-adjustments-bg($Primary);
+    }

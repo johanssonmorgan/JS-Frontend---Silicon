@@ -1,0 +1,28 @@
+@import "./navbar-links";
+
+nav {
+
+    .nav-silicon-logo {grid-area: nav-logo;
+    margin-right: 2.5rem;}
+    .nav-menu-button {grid-area: nav-menu;}
+    
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    gap: 1.5rem;
+    padding-block: 1rem;
+    grid-template-areas: 
+    "nav-logo nav-toggle nav-menu";
+
+    @include tablet {
+        gap: 3.7rem;
+    }
+
+    @include desktop {
+        grid-template-columns: auto auto 1fr auto auto;
+        gap: 1.5rem;
+        padding-block: 1rem;
+        grid-template-areas: 
+        "nav-logo features contact nav-toggle nav-sign-in";
+    }
+}

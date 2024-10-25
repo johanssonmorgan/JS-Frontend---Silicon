@@ -1,0 +1,209 @@
+.fs-1 {
+    @include text-small-regular;
+    color: $GraySp-11;
+    
+    @include desktop {
+        color: var(--clr-GraySp-3);
+    }
+}
+
+.fs-2 {
+    @include text-small-regular;
+    color: var(--clr-GraySp-9);
+    line-height: 1.5;
+    
+    @include tablet {
+        color: var(--clr-GraySp-10);
+    }
+}
+
+.fs-3 {
+    @include text-small-regular;
+    color: $GraySp-6;
+    
+    @include desktop {
+        color: var(--clr-GraySp-10);
+    }
+}
+
+.fs-4 {
+    @include text-small-regular;
+    color: var(--clr-GraySp-9);
+}
+
+.fs-5 {
+    @include text-small-semibold;
+    color: $White;
+}
+
+.fs-6 {
+    @include text-small-semibold;
+    color: $Primary;
+    @include color-adjustments-text($Primary);
+}
+
+.fs-7 {
+    @include text-small-semibold;
+    color: $Success;
+    @include color-adjustments-text($Success);
+}
+
+.fs-8 {
+    @include text-medium-regular;
+    color: $GraySp-1;
+    
+    @include desktop {
+        color: var(--clr-Gray700);
+    }
+}
+
+.fs-9 {
+    @include text-medium-regular;
+    color: $GraySp-1;
+    
+    @include desktop {
+        color: var(--clr-GraySp-10);
+    }
+}
+
+.fs-10 {
+    @include text-medium-regular;
+    color: var(--clr-GraySp-9);
+
+    @include desktop {
+        color: var(--clr-GraySp-10);
+    }
+}
+
+.fs-11 {
+    @include text-medium-semibold;
+    color: var(--clr-GraySp-2);
+    
+    @include tablet {
+        color: var(--clr-Gray900);
+    }
+}
+
+.fs-12 {
+    @include text-medium-semibold;
+    color: var(--clr-dm-label);
+    
+    @include desktop {
+        color: $dm-label-dt;
+    }
+}
+
+.fs-13 {
+    @include text-medium-semibold;
+    color: var(--clr-Gray800);
+    
+    &:hover,
+    &:focus-visible {
+        color: $Primary;
+    }
+}
+
+.fs-14 {
+    @include text-medium-bold;
+    color: var(--clr-Gray900);
+}
+
+.fs-15 {
+    @include text-large;
+    color: var(--clr-GraySp-10);
+}
+
+.fs-16 {
+    @include text-large;
+    color: var(--clr-GraySp-9);
+    
+    @include desktop {
+        color: var(--clr-Gray600);
+    }
+}
+
+.fs-17 {
+    @include text-large;
+    color: $GraySp-1;
+
+    @include tablet {
+        color: $GraySp-6;
+    }
+
+    @include desktop {
+        color: var(--clr-GraySp-10);
+    }
+}
+
+.fs-18 {
+    @include text-large;
+    color: var(--clr-GraySp-8);
+
+    @include tablet {
+        color: $GraySp-1;
+    }
+
+    @include desktop {
+        color: var(--clr-GraySp-10);
+    }
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+    @include headers
+}
+
+.h1 {
+    font-size: 2.125rem;
+
+    @include tablet {
+        font-size: 2.75rem;
+    }
+
+    @include desktop {
+        color: var(--clr-Gray900);
+        font-size: 3.5rem;
+    }
+}
+    
+.h2 {
+    font-size: 1.75rem;
+
+    @include tablet {
+        font-size: 2.125rem;
+    }
+
+    @include desktop {
+        color: var(--clr-Gray900);
+        font-size: 2.5rem;
+    }
+}
+
+.h3 {
+    font-size: 1.5rem;
+
+    @include tablet {
+        color: var(--clr-Gray900);
+        font-size: 2rem;
+    }
+}
+
+.h4 {
+    font-size: 1.35rem;
+
+    @include tablet {
+        font-size: 1.42rem;
+    }
+
+    @include desktop {
+        color: var(--clr-Gray900);
+        font-size: 1.5rem;
+    }
+}
+
+.h5 {
+    font-size: 1.25rem;
+
+    @include desktop {
+        color: var(--clr-Gray900);
+    }
+}

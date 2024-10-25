@@ -1,0 +1,17 @@
+@import "./section-2-brands-border";
+@import "./section-2-brands-dt-brands";
+
+.brands {
+    display: none;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    justify-content: space-between;
+
+    @include tablet {
+        display: flex;
+    }
+
+    @include desktop {
+        padding-block: 6rem;
+    }
+}

@@ -1,114 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
+import FAQCard from './FAQCard';
 
 const FAQAccordion = () => {
+
+    const [faqContent, setFaqContent] = useState([
+        {
+            "id": uuidv4(),
+            "title": "Is any of my personal information stored in the App?",
+            "content": "No, the app does not store any personal information. All data is encrypted and stored securely on our servers. You have full control over your data at all times."
+        },
+        {
+            "id": uuidv4(),
+            "title": "What formats can I download my transaction history in?",
+            "content": "You can download your transaction history in various formats such as PDF, CSV, and Excel. This allows you to easily manage and review your transactions."
+        },
+        {
+            "id": uuidv4(),
+            "title": "Can I schedule future transfers?",
+            "content": "Yes, you can schedule future transfers. Simply choose the date and time for the transfer and the app will handle the rest, ensuring that your transfer is processed on time."
+        },
+        {
+            "id": uuidv4(),
+            "title": "When can I use Banking App services?",
+            "content": "Our banking services are available 24/7, so you can access your account and make transactions anytime, from anywhere."
+        },
+        {
+            "id": uuidv4(),
+            "title": "Can I create my own password that is easy for me to remember?",
+            "content": "Yes, you can create your own password following our security guidelines. We recommend using a combination of letters, numbers, and special characters for a strong and memorable password."
+        },
+        {
+            "id": uuidv4(),
+            "title": "What happens if I forget or lose my password?",
+            "content": "If you forget your password, you can reset it using the 'Forgot Password' feature. A verification code will be sent to your registered email or phone number to help you reset your password."
+        }       
+    ])
+
+
   return (
-    <div className="p6-faq-cont br-05 border-faq-cont">
-
-        <div className="faq-3-opened br-05 border-faq">
-            <div className="faq-open">
-                <div className="faq">
-                    <p className="fs-11 w-90">Is any of my personal information stored in the App?</p>
-                    <button className="btn-open dropshadow">
-                        <span className="sr-only">Minimize the answer.</span>
-                        <img className="show-more-icon" src="src/assets/show-more-icon.svg" alt="Show more" />
-                    </button>
-                </div>
-                <div className="faq-answer">
-                    <div className="expandable">
-                        <p className="fs-2">Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                        <p className="fs-2">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="faq-3-opened br-05 faq-divider-top border-faq">
-            <div className="faq-open">
-                <div className="faq">
-                    <p className="fs-11 w-90">What formats can I download my transaction history in?</p>
-                    <button className="btn-open dropshadow">
-                        <span className="sr-only">Minimize the answer.</span>
-                        <img className="show-more-icon" src="src/assets/show-more-icon.svg" alt="Show more" />
-                    </button>
-                </div>
-                <div className="faq-answer">
-                    <div className="expandable">
-                        <p className="fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at doloribus dignissimos illo quasi eligendi, eum voluptatum itaque officia vero nemo voluptas dicta, maiores omnis tempora deleniti incidunt obcaecati explicabo iusto debitis reprehenderit quia. Laudantium error odit aliquid optio minima.</p>
-                        <p className="fs-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sint ratione magnam nisi, minus at quae debitis fuga vel ad a pariatur illum sunt incidunt quas? Itaque expedita cum in.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="faq-3-opened br-05 faq-divider-top border-faq">
-            <div className="faq-open">
-                <div className="faq">
-                    <p className="fs-11 w-90">Can I schedule future transfers?</p>
-                    <button className="btn-open dropshadow">
-                        <span className="sr-only">Minimize the answer.</span>
-                        <img className="show-more-icon" src="src/assets/show-more-icon.svg" alt="Show more" />
-                    </button>
-                </div>
-                <div className="faq-answer">
-                    <div className="expandable">
-                        <p className="fs-2">Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="faq-3-opened br-05 faq-divider-top border-faq">
-            <div className="faq-open">
-                <div className="faq">
-                    <p className="fs-11 w-90">When can I use Banking App services?</p>
-                    <button className="btn-open dropshadow">
-                        <span className="sr-only">Minimize the answer.</span>
-                        <img className="show-more-icon" src="src/assets/show-more-icon.svg" alt="Show more" />
-                    </button>
-                </div>
-                <div className="faq-answer">
-                    <div className="expandable">
-                        <p className="fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor alias, doloremque natus atque omnis architecto! Consequatur impedit quos ipsam, blanditiis consectetur sed, provident, a necessitatibus minima facere culpa reiciendis quasi ex iusto veritatis voluptates mollitia fuga est tempora explicabo eum aliquam! Omnis, placeat, architecto voluptas exercitationem magnam aperiam impedit ad atque obcaecati, quibusdam sint unde quis et molestiae. Expedita!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="faq-3-opened br-05 faq-divider-top border-faq">
-            <div className="faq-open">
-                <div className="faq">
-                    <p className="fs-11 w-90">Can I create my own password that is easy for me to remember?</p>
-                    <button className="btn-open dropshadow">
-                        <span className="sr-only">Minimize the answer.</span>
-                        <img className="show-more-icon" src="src/assets/show-more-icon.svg" alt="Show more" />
-                    </button>
-                </div>
-                <div className="faq-answer">
-                    <div className="expandable">
-                        <p className="fs-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate id amet soluta in, facilis laudantium sit, officiis eum quam natus nostrum veritatis. Nobis adipisci, recusandae qui delectus asperiores ea veritatis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="faq-3-opened br-05 faq-divider-top border-faq">
-            <div className="faq-open">
-                <div className="faq">
-                    <p className="fs-11 w-90">What happens if I forget or lose my password?</p>
-                    <button className="btn-open dropshadow">
-                        <span className="sr-only">Minimize the answer.</span>
-                        <img className="show-more-icon" src="src/assets/show-more-icon.svg" alt="Show more" />
-                    </button>
-                </div>
-                <div className="faq-answer">
-                    <div className="expandable">
-                        <p className="fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum nulla inventore corporis odio, repellendus eos pariatur iste nisi maiores quas aut explicabo tempore velit id fugit, dignissimos suscipit rem maxime saepe!</p>
-                        <p className="fs-2">Porro praesentium minima suscipit velit neque hic, distinctio atque aliquid similique! Minus facere laudantium nobis eius magnam quaerat itaque sit nesciunt excepturi eveniet, unde provident similique reiciendis voluptas?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div className="p6-faq-cont br-05 border-faq-cont faq-divider">
+        {faqContent.map(data => (
+            <FAQCard key={data.id} title={data.title} content={data.content} />
+        ))}
     </div>
   )
 }

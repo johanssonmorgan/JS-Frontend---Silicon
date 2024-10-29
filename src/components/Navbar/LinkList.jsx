@@ -1,6 +1,7 @@
 import React from 'react'
 import NavigataionLink from './NavigataionLink'
 import BtnPrimary from '../UI/BtnPrimary'
+import SignInIcon from '/src/assets/sign-in-icon.svg'
 
 const LinkList = () => {
   return (
@@ -12,7 +13,7 @@ const LinkList = () => {
         <NavigataionLink to={"contact.html"} linkName={"Contact"} />
         </li>
         <li className="sign-in">
-        <BtnPrimary imageBefore={"/src/assets/sign-in-icon.svg"} altText={"user icon"} text={"Sign in / up"} />
+        <BtnPrimary imageBefore={SignInIcon} altText={"user icon"} text={"Sign in / up"} />
         </li>
     </ul>
   )

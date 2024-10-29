@@ -1,11 +1,12 @@
-import react, { useState } from 'react'
-import ReviewCard from './ReviewCard'
+import react, { useState } from 'react';
+import ReviewCard from './ReviewCard';
+import { v4 as uuidv4 } from 'uuid';
 
 function Testimonials() {
 
 const [testimonials, setTestimonials] = useState([
 	{
-	id: crypto.randomUUID(),
+	id: uuidv4(),
 	author: "Fannie Summers",
 	jobRole: "Designer",
 	starRating: 4,

@@ -58,7 +58,7 @@
         padding-block: 1rem;
     }
     
-    .faq-divider-top {
+    .faq-divider > :not(:first-child) {
         border-radius: 0;
         border-top: 1px solid var(--clr-GraySp-7);
         padding-block: 1rem;

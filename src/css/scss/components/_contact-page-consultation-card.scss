@@ -1,0 +1,71 @@
+.consultation-card {
+    grid-area: consultation-card;
+    padding: 2.5rem;
+    background-color: $White;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+    width: 100%;
+
+    .btn-primary {
+        padding-block: 1em;
+        border-radius: .5em;
+        color: $White;
+        margin-top: 3rem;
+        font-size: 1rem;
+
+        @include desktop {
+            margin-top: 10rem;
+        }
+    }
+
+    @include desktop {
+        padding: 4.5rem;
+        margin-bottom: 0;
+    }
+}
+
+.form-consultation {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .form-group {
+
+        input {
+            width: 100%;
+            font-size: 1rem;
+            border-radius: .5em;
+            padding: .75em;
+            margin-top: .2rem;
+            border: 1px solid #aeaeae;
+
+            &:focus-visible, &:active {
+                outline: none;
+                box-shadow: $dropshadow-primary;
+            }
+
+        }
+
+        select {
+            width: 100%;
+            font-size: 1rem;
+            border-radius: .5em;
+            padding: .75em;
+            margin-top: .2rem;
+            border: 1px solid #aeaeae;
+
+            &:focus-visible, &:active {
+                outline: none;
+                box-shadow: $dropshadow-primary;
+            }
+        }
+    }
+
+    label {
+        display: block;
+    }
+}

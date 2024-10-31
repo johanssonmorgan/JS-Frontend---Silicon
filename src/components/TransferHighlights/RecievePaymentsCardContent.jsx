@@ -1,10 +1,10 @@
 import React from 'react'
 
-const RecievePaymentsCardContent = ({ image, altText = "", paragraphText, DivClassName = "" }) => {
+const RecievePaymentsCardContent = ({ data }) => {
   return (
-    <div className={DivClassName}>
-        <img src={image} alt={altText} />
-        <p className="fs-9">{paragraphText}</p>
+    <div className={data.className}>
+        <img src={data.imageUrl} alt={data.altText} />
+        <p className="fs-9">{data.text}</p>
     </div>
   )
 }

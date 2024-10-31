@@ -11,7 +11,7 @@ const FeaturesSection = () => {
         <CompanyLogos />
 
         <div id="features" className="section-2-content">
-            <ImageContainer image={Image} altText='iPhone screen shows transaction history.' optionalClassName='app-features-image' />
+            <ImageContainer imageUrl={Image} altText='iPhone screen shows transaction history.' className='app-features-image' />
             <FeaturesCard />
         </div>
     </section>

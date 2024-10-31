@@ -37,8 +37,8 @@ const ContactCard = () => {
   return (
     <div className="p6-contact">
 
-        {contactCard.map(card => (
-            <ContactBox key={card.id} image={card.imageUrl} altText={card.altText} imageClassName={card.imageClass} text={card.text} to={card.linkUrl} buttonText={card.buttonText} buttonTextClass={card.buttonTextClass} buttonImage={card.buttonImageUrl} />
+        {contactCard.map(data => (
+            <ContactBox key={data.id} data={data} />
         ))}
         
         <div className="contact-mobile">

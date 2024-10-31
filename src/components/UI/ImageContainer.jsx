@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ImageContainer = ({ image, altText = "", optionalClassName = "" }) => {
+const ImageContainer = ({ imageUrl, altText = "", className = "" }) => {
   return (
-    <div className={`${optionalClassName}`}>
-        <img src={image} alt={altText} />
+    <div className={`${className}`}>
+        <img src={imageUrl} alt={altText} />
     </div>
   )
 }

@@ -1,0 +1,47 @@
+// Individual card
+
+.address-card {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &:nth-of-type(1) {
+        margin-top: 1rem;
+
+        @include desktop {
+            margin-top: 0;
+        }
+    }
+
+    &:nth-of-type(2) {
+        margin-bottom: 3rem;
+
+        @include desktop {
+            margin-bottom: 0;
+        }
+    }
+
+    span {
+        line-height: 1.7;
+    }
+
+    li {
+        display: flex;
+        place-items: start;
+        gap: .5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+// Container inculdes social media links
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include desktop {
+        justify-content: space-between;
+    }
+}

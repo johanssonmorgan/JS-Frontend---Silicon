@@ -18,7 +18,7 @@ const FeaturesCard = () => {
       text: "Id mollis consectetur congue egestas egestas suspendisse blandit justo.",
       imageUrl: EasyPaymentsIcon,
       altText: "Credit Card icon",
-      class: "features-card-content-1"
+      className: "features-card-content-1"
     },
     {
       id: uuidv4(),
@@ -26,7 +26,7 @@ const FeaturesCard = () => {
       text: "Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.",
       imageUrl: DataSequrityIcon,
       altText: "Shield icon",
-      class: "features-card-content-2"
+      className: "features-card-content-2"
     },
     {
       id: uuidv4(),
@@ -34,7 +34,7 @@ const FeaturesCard = () => {
       text: "Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.",
       imageUrl: CostStatisticsIcon,
       altText: "Stack Chart icon",
-      class: "features-card-content-3"
+      className: "features-card-content-3"
     },
     {
       id: uuidv4(),
@@ -42,7 +42,7 @@ const FeaturesCard = () => {
       text: "A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.",
       imageUrl: SupportIcon,
       altText: "Speech Bubbles icon",
-      class: "features-card-content-4"
+      className: "features-card-content-4"
     },
     {
       id: uuidv4(),
@@ -50,7 +50,7 @@ const FeaturesCard = () => {
       text: "Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.",
       imageUrl: RegularCashbackIcon,
       altText: "Wallet with Cash icon",
-      class: "features-card-content-5"
+      className: "features-card-content-5"
     },
     {
       id: uuidv4(),
@@ -58,15 +58,15 @@ const FeaturesCard = () => {
       text: "Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.",
       imageUrl: TopStandardsIcon,
       altText: "Happy Face icon",
-      class: "features-card-content-6"
+      className: "features-card-content-6"
     },
   ])
 
   return (
     <div className="features-card">
         <FeaturesCardHeader />
-        {content.map(card => (
-          <FeaturesCardContent key={card.id} headerText={card.header} paragraphText={card.text} image={card.imageUrl} altText={card.altText} specificClassName={card.class} />
+        {content.map(data => (
+          <FeaturesCardContent key={data.id} data={data} />
         ))}
     </div>
   )

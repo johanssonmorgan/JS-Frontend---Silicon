@@ -9,8 +9,8 @@ const TransferHighlightsSection = () => {
   return (
     <section className="section-4 container" id="section-4">
         <ListCard />
-        <ImageContainer image={LineGraphShowcase} altText='Line graph showing the users spendings.' optionalClassName='section-4-top-right-card' />
-        <ImageContainer image={ContactsShowcase} altText='Contacts screen, showing recent transactions to contacts.' optionalClassName='section-4-bottom-left-card' />
+        <ImageContainer imageUrl={LineGraphShowcase} altText='Line graph showing the users spendings.' className='section-4-top-right-card' />
+        <ImageContainer imageUrl={ContactsShowcase} altText='Contacts screen, showing recent transactions to contacts.' className='section-4-bottom-left-card' />
         <RecievePaymentsCard />
     </section>
   )

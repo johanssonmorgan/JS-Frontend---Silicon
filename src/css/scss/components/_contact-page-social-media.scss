@@ -1,0 +1,18 @@
+.social-media-box {
+    width: 44px;
+    aspect-ratio: 1;
+    background-color: #EFF2FC;
+    display: grid;
+    place-items: center;
+    border-radius: 0.375rem;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 1rem;
+    place-content: center;
+
+    @include desktop {
+        place-content: start;
+    }
+}

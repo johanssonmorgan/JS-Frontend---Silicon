@@ -8,6 +8,8 @@ import TransferHighlightsSection from './components/TransferHighlights/TransferH
 import TestimonialsSection from './components/Testimonials/TestimonialsSection'
 import Footer from './components/Footer/Footer'
 import FAQContactSection from './components/FAQContact/FAQContactSection'
+import ContactUsSection from './components/ContactUsPageComponents/ContactUsSection'
+import MapAddressSection from './components/ContactUsPageComponents/MapAddressSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +26,8 @@ function App() {
       <TransferHighlightsSection />
       <TestimonialsSection />
       <FAQContactSection />
+      <ContactUsSection />
+      <MapAddressSection />
     </main>
     <footer>
       <Footer />

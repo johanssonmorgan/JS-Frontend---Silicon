@@ -25,8 +25,8 @@ const ListCard = () => {
     <div className="section-4-top-left-card gap-2">
         <h2 className="h3 w-75">Make your money transfer simple and clear</h2>
         <ul className="section-4-list">
-          {listItem.map(item => (
-            <ListCardItem key={item.id} text={item.text} />
+          {listItem.map(data => (
+            <ListCardItem key={data.id} data={data} />
           ))}
         </ul>
         <div className="d-flex">

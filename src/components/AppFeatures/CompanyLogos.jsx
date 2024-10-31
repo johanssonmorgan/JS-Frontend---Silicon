@@ -51,7 +51,7 @@ const CompanyLogos = () => {
   return (
     <div className="brands">
       {logos.map(logo => (
-        <ImageContainer key={logo.id} image={logo.imageUrl} altText={logo.altText} optionalClassName={logo.class} />
+        <ImageContainer key={logo.id} imageUrl={logo.imageUrl} altText={logo.altText} className={logo.class} />
       ))}
     </div>
   );

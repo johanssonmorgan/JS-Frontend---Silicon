@@ -41,7 +41,7 @@ const FAQAccordion = () => {
   return (
     <div className="p6-faq-cont br-05 border-faq-cont faq-divider">
         {faqContent.map(data => (
-            <FAQCard key={data.id} title={data.title} content={data.content} />
+            <FAQCard key={data.id} data={data} />
         ))}
     </div>
   )

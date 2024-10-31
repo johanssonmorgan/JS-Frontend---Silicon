@@ -56,16 +56,16 @@ const ResponsiveImageContainer = () => {
   return (
     <div className="section-3-images">
         <div className="section-3-images-mobile">
-            <ImageContainer optionalClassName='s3-img1' image={MobileImage} altText='Transfer screen, showing account balance and a list of phone contacts as potentional recivers.' />
+            <ImageContainer className='s3-img1' imageUrl={MobileImage} altText='Transfer screen, showing account balance and a list of phone contacts as potentional recivers.' />
         </div>
         <div className="section-3-images-tablet">
             {tabletImages.map(image => (
-              <ImageContainer key={image.id} image={image.imageUrl} altText={image.altText} optionalClassName={image.class} />
+              <ImageContainer key={image.id} imageUrl={image.imageUrl} altText={image.altText} className={image.class} />
             ))}
         </div>
         <div className="section-3-images-desktop">
             {desktopImages.map(image => (
-              <ImageContainer key={image.id} image={image.imageUrl} altText={image.altText} optionalClassName={image.class} />
+              <ImageContainer key={image.id} imageUrl={image.imageUrl} altText={image.altText} className={image.class} />
             ))}
         </div>
     </div>

@@ -14,22 +14,22 @@ export const RecievePaymentsCard = () => {
       imageUrl: EasyPaymentsIcon,
       altText: "Credit card icon.",
       text: "Manage your payments online. Mollis congue egestas egestas fermentum fames.",
-      class: "section-4-bottom-right-text-left"
+      className: "section-4-bottom-right-text-left"
     },
     {
       id: uuidv4(),
       imageUrl: RegularCashbackIcon,
       altText: "Wallet with cash icon.",
       text: "A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.",
-      class: "section-4-bottom-right-text-right"
+      className: "section-4-bottom-right-text-right"
     },
   ])
 
   return (
     <div className="section-4-bottom-right-card">
         <h2 className="h3 section-4-bottom-right-header">Receive payment from international bank details</h2>
-        {cardContent.map(card => (
-            <RecievePaymentsCardContent key={card.id} image={card.imageUrl} altText={card.altText} paragraphText={card.text} DivClassName={card.class} />
+        {cardContent.map(data => (
+            <RecievePaymentsCardContent key={data.id} data={data} />
           ))}
         <div className="d-flex section-4-bottom-right-button">
             <BtnPrimary text={"Learn more"} imageAfter={LearnMoreIcon} altText='arrow symbol' srText={"Learn more about recieving money from international banks."} />

@@ -1,38 +1,30 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './main.css'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import Features from './pages/Features'
 import Navbar from './components/Navbar/Navbar'
-import HeroSection from './components/HeroSection/HeroSection'
-import FeaturesSection from './components/AppFeatures/FeaturesSection'
-import HowItWorksSection from './components/HowItWorks/HowItWorksSection'
-import TransferHighlightsSection from './components/TransferHighlights/TransferHighlightsSection'
-import TestimonialsSection from './components/Testimonials/TestimonialsSection'
 import Footer from './components/Footer/Footer'
-import FAQContactSection from './components/FAQContact/FAQContactSection'
-import ContactUsSection from './components/ContactUsPageComponents/ContactUsSection'
-import MapAddressSection from './components/ContactUsPageComponents/MapAddressSection'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <BrowserRouter>
     <header>
       <Navbar />
     </header>
     <main>
-      <HeroSection />
-      <FeaturesSection />
-      <HowItWorksSection />
-      <TransferHighlightsSection />
-      <TestimonialsSection />
-      <FAQContactSection />
-      <ContactUsSection />
-      <MapAddressSection />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/features" element={<Features />} />
+      </Routes>
     </main>
     <footer>
       <Footer />
     </footer>
-    </>
+    </BrowserRouter>
   )
 }
 

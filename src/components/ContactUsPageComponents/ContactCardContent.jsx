@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ContactCardContent = ({ content }) => {
   return (
@@ -9,10 +10,10 @@ const ContactCardContent = ({ content }) => {
       <div className='contact-card-content'>
         <h2 className='h4'>{content.header}</h2>
         <p className='fs-9 w-65'>{content.text}</p>
-        <a className="btn-contact gap-05" href={content.to}>
+        <Link className="btn-contact gap-05" to={content.to}>
           <p className='fs-6 contact-us'>{content.buttonText}</p>
           <img src={content.buttonImageUrl} alt="arrow symbol" />
-        </a>
+        </Link>
       </div>
     </div>
   )

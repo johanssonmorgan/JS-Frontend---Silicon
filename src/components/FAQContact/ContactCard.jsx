@@ -16,7 +16,7 @@ const ContactCard = () => {
             imageUrl: ContactPhoneIcon,
             imageClass: "contact-phone-icon",
             altText: "Call us icon",
-            linkUrl: "#",
+            linkUrl: "/contact",
             buttonText: "Contact us",
             buttonTextClass: "fs-6 contact-us",
             buttonImageUrl: ContactPhoneArrow
@@ -27,7 +27,7 @@ const ContactCard = () => {
             imageUrl: ContactTextIcon,
             imageClass: "contact-text-icon",
             altText: "Text us icon",
-            linkUrl: "#",
+            linkUrl: "/contact",
             buttonText: "Contact us",
             buttonTextClass: "fs-7 contact-us",
             buttonImageUrl: ContactTextArrow
@@ -42,7 +42,7 @@ const ContactCard = () => {
         ))}
         
         <div className="contact-mobile">
-            <BtnPrimary text={"Contact us now"} />
+            <BtnPrimary to='/contact' text={"Contact us now"} />
         </div>
     </div>
   )

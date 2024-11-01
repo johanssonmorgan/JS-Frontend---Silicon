@@ -10,7 +10,7 @@ const Navbar = () => {
         <LogoLink />
         <LinkList />
         <DarkModeToggle />
-        <BtnHamburger />
+        {/* <BtnHamburger /> */}
     </nav>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import NextBtn from '/src/assets/next-btn.svg'
+import { Link } from 'react-router-dom'
 
 const BtnDiscover = () => {
   return (

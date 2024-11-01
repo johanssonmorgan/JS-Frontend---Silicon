@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ContactBox = ({ data }) => {
   return (
@@ -7,10 +8,10 @@ const ContactBox = ({ data }) => {
             <img className={data.imageClass} src={data.imageUrl} alt={data.altText} />
         </div>
         <p className="fs-3 mb-05 d-inline-block mb-1">{data.text}</p>
-        <a className="btn-contact gap-05" href={data.linkUrl}>
+        <Link className="btn-contact gap-05" to={data.linkUrl}>
             <p className={data.buttonTextClass}>{data.buttonText}</p>
             <img src={data.buttonImageUrl} alt="arrow symbol" />
-        </a>
+        </Link>
     </div>
   )
 }

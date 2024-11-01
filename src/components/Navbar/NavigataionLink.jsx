@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NavigataionLink = ({ to, linkName }) => {
+const NavigataionLink = ({ link }) => {
   return (
-    <a className="fs-13" href={to}>{linkName}</a>
+    <NavLink className="fs-13" to={link.to}>{link.name}</NavLink>
   )
 }
 

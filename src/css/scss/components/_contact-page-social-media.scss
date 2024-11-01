@@ -5,6 +5,8 @@
     display: grid;
     place-items: center;
     border-radius: 0.375rem;
+
+    @include color-adjustments-bg(#EFF2FC);
 }
 
 .social-media-links {

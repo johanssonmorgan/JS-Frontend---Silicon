@@ -1,0 +1,29 @@
+.page-title {
+    background-color: var(--clr-Gray100);
+    padding-block: 2rem;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .3rem;
+
+        & > :nth-child(2) {
+            margin-right: .4rem;
+          }
+    }
+
+    span::first-letter {
+        text-transform: uppercase;
+    }
+
+    span.fs-1 {
+        color: $Primary;
+    }
+}

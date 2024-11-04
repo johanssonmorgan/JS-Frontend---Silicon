@@ -27,17 +27,18 @@
     --clr-GraySp-10: #{$GraySp-10-dark};
     --clr-bg: #{$bg-dark};
     --clr-mb-faq-bg: #{$mb-faq-bg-dark};
+    --clr-contact-form-bg :#{$contact-form-bg-dark};
 
     .silicon-icon {
-        content: url(images/dm-Silicon-logotype.svg);}
+        content: url(src/assets/dm-Silicon-logotype.svg);}
     .appstore-icon {
-        content: url(images/dm-appstore.svg);}
+        content: url(src/assets/dm-appstore.svg);}
     .googleplay-icon {
-        content: url(images/dm-googleplay.svg);}
+        content: url(src/assets/dm-googleplay.svg);}
     .show-more-icon {
-        content: url(images/dm-show-more-icon.svg);}
+        content: url(src/assets/dm-show-more-icon.svg);}
     .next-icon {
-        content: url(images/dm-next-btn.svg);}
+        content: url(src/assets/dm-next-btn.svg);}
     .mobile-icon {
-        content: url(images/dm-mobile-menu-button.svg);}
+        content: url(src/assets/dm-mobile-menu-button.svg);}
 }

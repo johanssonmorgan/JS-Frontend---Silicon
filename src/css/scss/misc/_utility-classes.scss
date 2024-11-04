@@ -93,6 +93,12 @@
 .bg-white {
     background-color: var(--clr-SpWhite);
 }
+.bg-standard {
+    background-color: var(--clr-bg);
+}
+.bg-contact-form {
+    background-color: var(--clr-contact-form-bg);
+}
 .dropshadow{
     box-shadow: $dropshadow-primary;
 }

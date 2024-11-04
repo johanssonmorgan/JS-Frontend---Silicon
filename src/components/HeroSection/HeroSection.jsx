@@ -5,13 +5,11 @@ import HeroImageContainer from './HeroImageContainer'
 
 const HeroSection = () => {
   return (
-    <div id='hero'>
-        <section className="section-1 container">
-            <HeroHeader />
-            <HeroContent />
-            <HeroImageContainer />
-        </section>
-    </div>
+    <section className="section-1 container">
+        <HeroHeader />
+        <HeroContent />
+        <HeroImageContainer />
+    </section>
   )
 }
 

@@ -1,0 +1,12 @@
+.home {
+    background: linear-gradient(to top, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), var(--clr-bg);
+}
+
+.features-section {
+    background-color: var(--clr-bg);
+}
+
+.contact-section {
+    background-color: var(--clr-bg);
+    background-image: linear-gradient(var(--clr-Gray100), var(--clr-Gray100));
+}

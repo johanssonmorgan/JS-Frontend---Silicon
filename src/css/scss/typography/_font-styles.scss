@@ -148,6 +148,17 @@
     }
 }
 
+.fs-19 {
+    @include text-medium-bold;
+    color: var(--clr-Gray800);
+}
+
+.fs-20 {
+    @include text-medium-regular;
+    color: var(--clr-Gray700);
+
+}
+
 .h1, .h2, .h3, .h4, .h5 {
     @include headers
 }

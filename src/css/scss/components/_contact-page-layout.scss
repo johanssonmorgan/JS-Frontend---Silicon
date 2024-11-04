@@ -24,6 +24,7 @@
 @include desktop {
     
     .bottom-part {
+        background-color: var(--clr-bg);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -77,10 +78,13 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding-bottom: 1rem;
+    
 
     @include desktop {
         flex-direction: row;
         padding-top: 6rem;
         gap: 10rem;
+        padding-bottom: 30rem;
     }
 }

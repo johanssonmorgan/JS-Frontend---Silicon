@@ -8,8 +8,16 @@ const Breadcrumb = () => {
     const location = useLocation();
     const pathnames = location.pathname.split('/').filter((x) => x);
 
+    let locationId;
+    
+    if (location.pathname === '/contact') {
+      locationId = 'bc-contact';
+    } else if (location.pathname === '/features') {
+      locationId = 'bc-features';
+    }
+
   return (
-    <section className="page-title">
+    <section className={locationId}>
         <div className="container">
             <ul className='breadcrumb'>
                 <li className='fs-1'><img src={homeIcon} alt="House icon" /><Link to="/">Homepage</Link><img src={chevrons} alt="chevrons" /></li>

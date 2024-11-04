@@ -1,13 +1,14 @@
 .consultation-card {
     grid-area: consultation-card;
     padding: 2.5rem;
-    background-color: $White;
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     margin-bottom: 3.5rem;
     width: 100%;
+    background-color: var(--clr-contact-form-bg);
+    background-image: linear-gradient(var(--clr-SpWhite), var(--clr-SpWhite));
 
     .btn-primary {
         padding-block: 1em;
@@ -42,6 +43,7 @@
             padding: .75em;
             margin-top: .2rem;
             border: 1px solid #aeaeae;
+            background-color: var(--clr-SpWhite);
 
             &:focus-visible, &:active {
                 outline: none;
@@ -57,11 +59,17 @@
             padding: .75em;
             margin-top: .2rem;
             border: 1px solid #aeaeae;
+            background-color: var(--clr-SpWhite);
 
             &:focus-visible, &:active {
                 outline: none;
                 box-shadow: $dropshadow-primary;
             }
+        }
+
+        option {
+            font-size: 1rem;
+            color: black;
         }
     }
 

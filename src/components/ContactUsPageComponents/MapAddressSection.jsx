@@ -60,7 +60,7 @@ const MapAddressSection = () => {
 
 
   return (
-    <div className='bg-white'>
+    <div className='bg-standard'>
         <div className='container map-address-layout'>
           <div>
             <ImageContainer className='map-container' imageUrl={map} altText='Map displaying location for medical centers.' />

@@ -1,11 +1,16 @@
 @import "./navbar-links";
 
-nav {
+.navbar {
 
-    .nav-silicon-logo {grid-area: nav-logo;
-    margin-right: 2.5rem;}
-    .nav-menu-button {grid-area: nav-menu;}
-    
+    .nav-silicon-logo {
+        grid-area: nav-logo;
+        margin-right: 2.5rem;
+    }
+
+    .nav-menu-button {
+        grid-area: nav-menu;
+    }
+
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto auto;
@@ -19,10 +24,10 @@ nav {
     }
 
     @include desktop {
-        grid-template-columns: auto auto 1fr auto auto;
+        grid-template-columns: auto auto 1fr auto auto auto;
         gap: 1.5rem;
         padding-block: 1rem;
         grid-template-areas: 
-        "nav-logo features contact nav-toggle nav-sign-in";
+        "nav-logo features contact nav-menu nav-toggle nav-sign-in";
     }
 }

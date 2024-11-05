@@ -7,22 +7,12 @@
     grid-template-rows: 1.75rem 1rem minmax(19.5rem, auto);
 }
 
-#quotation-left {
+#quotation {
     grid-column: 2;
     grid-row: 1 / 2;
 }
 
-#card-left {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-#quotation-right {
-    grid-column: 2;
-    grid-row: 1 / 2;
-}
-
-#card-right {
+#review-card {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }

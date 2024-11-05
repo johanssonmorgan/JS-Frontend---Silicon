@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import ShowMoreIcon from '/src/assets/show-more-icon.svg'
+import React from 'react';
+import WhiteChevron from '/src/assets/faq-white-chevron.svg';
+import BlackChevron from '/src/assets/faq-black-chevron.svg';
 
 const FAQCard = ({ data, isOpen, toggleOpen }) => {
 
@@ -9,9 +10,9 @@ const FAQCard = ({ data, isOpen, toggleOpen }) => {
     <div className="faq-open">
         <div onClick={toggleOpen} className="faq">
             <p className="fs-11 w-90">{data.title}</p>
-            <button className="btn-open dropshadow">
+            <button className={`btn-open ${isOpen ? 'dropshadow' : ''}`}>
                 <span className="sr-only">{isOpen ? 'Minimize the answer.' : 'Show the answer.'}</span>
-                <img className="show-more-icon" src={ShowMoreIcon} alt="Show more" />
+                <img className="show-more-icon" src={!isOpen ? BlackChevron : WhiteChevron } alt="Show more" />
             </button>
         </div>
         <div className="faq-answer">

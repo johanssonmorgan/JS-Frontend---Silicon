@@ -1,32 +1,41 @@
-import react, { useState } from 'react';
+import react, { useEffect, useState } from 'react';
 import ReviewCard from './ReviewCard';
-import { v4 as uuidv4 } from 'uuid';
 
 function Testimonials() {
 
-const [testimonials, setTestimonials] = useState([
-	{
-	id: uuidv4(),
-	author: "Fannie Summers",
-	jobRole: "Designer",
-	starRating: 4,
-	avatarUrl: "src/assets/fannie-avatar.svg",
-	comment: "Working with this team has been a fantastic experience! They understood my vision and delivered a design that exceeded my expectations. I would definitely reccomend them."
-	},
-	{
-	id: crypto.randomUUID(),
-	author: "Albert Flores",
-	jobRole: "Developer",
-	starRating: 5,
-	avatarUrl: "src/assets/albert-avatar.svg",
-	comment: "The project ran smoothly, and their technical expertise was evident from start to finish. Everything was delivered on time and exceeded our requirements. Full marks for their professionalism."
-	}
-	])
+    const [testimonials, setTestimonials] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchTestimonials = async () => {
+            try {
+                setLoading(true);
+                const response = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch FAQ content');
+                }
+                const data = await response.json();
+
+                const testimonial = data.map(item => ({...item}));
+                setTestimonials(testimonial);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchTestimonials();
+    }, []);
+
+    if (loading) return <p>Loading FAQs...</p>;
+    if (error) return <p>Error: {error}</p>;
 
 	return (
 		<>
 			{
-				testimonials.length > 0 && testimonials.map(testimonial => (
+				testimonials.map(testimonial => (
 					<ReviewCard key={testimonial.id} testimonial={testimonial} />
 				))
 			}

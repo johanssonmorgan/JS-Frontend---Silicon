@@ -69,7 +69,7 @@
   content: url(src/assets/dm-googleplay.svg);
 }
 :root.dark .show-more-icon {
-  content: url(src/assets/dm-show-more-icon.svg);
+  content: url(src/assets/faq-white-chevron.svg);
 }
 :root.dark .next-icon {
   content: url(src/assets/dm-next-btn.svg);
@@ -834,6 +834,7 @@ header {
   background-color: transparent;
   text-decoration: none;
   border: none;
+  z-index: 9999;
 }
 @media (width >= 1400px) {
   .btn-burger {
@@ -970,12 +971,13 @@ header {
 }
 .nav-links .contact {
   grid-area: contact;
+  width: fit-content;
 }
 .nav-links .sign-in {
   grid-area: nav-sign-in;
 }
 
-nav {
+.navbar {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr auto auto;
@@ -983,24 +985,24 @@ nav {
   padding-block: 1rem;
   grid-template-areas: "nav-logo nav-toggle nav-menu";
 }
-nav .nav-silicon-logo {
+.navbar .nav-silicon-logo {
   grid-area: nav-logo;
   margin-right: 2.5rem;
 }
-nav .nav-menu-button {
+.navbar .nav-menu-button {
   grid-area: nav-menu;
 }
 @media (width >= 768px) {
-  nav {
+  .navbar {
     gap: 3.7rem;
   }
 }
 @media (width >= 1400px) {
-  nav {
-    grid-template-columns: auto auto 1fr auto auto;
+  .navbar {
+    grid-template-columns: auto auto 1fr auto auto auto;
     gap: 1.5rem;
     padding-block: 1rem;
-    grid-template-areas: "nav-logo features contact nav-toggle nav-sign-in";
+    grid-template-areas: "nav-logo features contact nav-menu nav-toggle nav-sign-in";
   }
 }
 
@@ -1485,22 +1487,12 @@ nav .nav-menu-button {
   grid-template-rows: 1.75rem 1rem minmax(19.5rem, auto);
 }
 
-#quotation-left {
+#quotation {
   grid-column: 2;
   grid-row: 1/2;
 }
 
-#card-left {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-#quotation-right {
-  grid-column: 2;
-  grid-row: 1/2;
-}
-
-#card-right {
+#review-card {
   grid-column: 1/2;
   grid-row: 2/3;
 }
@@ -2079,11 +2071,6 @@ footer {
   row-gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-areas: "contact-header" "contacts-page-contact" "consultation-card";
-}
-@media (width < 768px) {
-  .contact-consulation-layout {
-    place-items: center;
-  }
 }
 @media (width >= 768px) {
   .contact-consulation-layout {

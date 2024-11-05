@@ -13,6 +13,7 @@
 
 .btn-burger {
     @include btn;
+    z-index: 9999;
 
     @include desktop {
         display: none;

@@ -8,10 +8,10 @@ const ReviewCard = ({ testimonial }) => {
 
   return (
     <div className="review-container">
-        <div id="quotation-left" className="quotation-mark dropshadow">
+        <div id="quotation" className="quotation-mark dropshadow">
             <img className="quotation-icon" src={QuotationMarkIcon} alt="Quotation mark" />
         </div>
-        <div id="card-left" className="review-card bg-white dropshadow">
+        <div id="review-card" className="review-card bg-white dropshadow">
             <div className="rating">
                 {[...Array(5)].map((_, index) => (
                     <img key={index} src={index < testimonial.starRating ? Star : StarOutline} alt={index < testimonial.starRating ? 'Star' : 'Star Outline'} />
@@ -22,7 +22,7 @@ const ReviewCard = ({ testimonial }) => {
             </div>
             <div className="user">
                 <div className="user-avatar">
-                    <img className="reviewer-avatar" src={testimonial.avatarUrl} alt="User avatar" />
+                    <img className="reviewer-avatar" src={testimonial.avatarUrl} alt={`${testimonial.author} avatar`} />
                 </div>
                 <div className="user-name">
                     <p className="fs-14">{testimonial.author}</p>

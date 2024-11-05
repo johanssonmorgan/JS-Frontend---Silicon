@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <nav className="navbar container" aria-label="Main navigation">
         <LogoLink />
-        <LinkList />
-        <DarkModeToggle />
-        <BtnHamburger />
+          <BtnHamburger />
+          <LinkList />
+          <DarkModeToggle />
     </nav>
   )
 }

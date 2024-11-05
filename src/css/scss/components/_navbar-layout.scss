@@ -11,23 +11,53 @@
         grid-area: nav-menu;
     }
 
-    display: grid;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    grid-template-columns: 1fr auto auto;
     gap: 1.5rem;
     padding-block: 1rem;
-    grid-template-areas: 
-    "nav-logo nav-toggle nav-menu";
 
     @include tablet {
         gap: 3.7rem;
     }
 
     @include desktop {
+        display: grid;
         grid-template-columns: auto auto 1fr auto auto auto;
         gap: 1.5rem;
         padding-block: 1rem;
         grid-template-areas: 
         "nav-logo features contact nav-menu nav-toggle nav-sign-in";
+    }
+
+    @include mobileTablet {
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            right: 1rem;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--clr-contact-form-bg);
+            padding-block: 2rem;
+            padding-inline: 1rem;
+            
+            border-radius: 0 0 .5em .5em;
+
+            .btn-primary {
+                margin-top: 2rem;
+            }
+        }
+
+        .nav-silicon-logo {
+            flex: 1;
+        }
+
+        .nav-menu-button {
+            order: 3;
+        }
     }
 }

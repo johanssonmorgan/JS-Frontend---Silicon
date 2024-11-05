@@ -1,8 +1,11 @@
 import React from 'react'
 import QuotationMarkIcon from '/src/assets/quotation-mark.svg'
-import FourStars from '/src/assets/4-stars.svg'
+import Star from '/src/assets/star.svg'
+import StarOutline from '/src/assets/star-outline.svg'
+
 
 const ReviewCard = ({ testimonial }) => {
+
   return (
     <div className="review-container">
         <div id="quotation-left" className="quotation-mark dropshadow">
@@ -10,14 +13,16 @@ const ReviewCard = ({ testimonial }) => {
         </div>
         <div id="card-left" className="review-card bg-white dropshadow">
             <div className="rating">
-                <img className="stars-rating" src={FourStars} alt="4 out of 5 stars rating" />
+                {[...Array(5)].map((_, index) => (
+                    <img key={index} src={index < testimonial.starRating ? Star : StarOutline} alt={index < testimonial.starRating ? 'Star' : 'Star Outline'} />
+                ))}
             </div>
             <div className="review-text">
                 <p className="fs-15">{testimonial.comment}</p>
             </div>
             <div className="user">
                 <div className="user-avatar">
-                    <img className="reviewer-avatar" src={testimonial.avatarUrl} alt="Fannie Summers avatar" />
+                    <img className="reviewer-avatar" src={testimonial.avatarUrl} alt="User avatar" />
                 </div>
                 <div className="user-name">
                     <p className="fs-14">{testimonial.author}</p>

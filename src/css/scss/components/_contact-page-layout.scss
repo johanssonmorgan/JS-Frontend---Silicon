@@ -21,16 +21,13 @@
     }
 }
 
-@include desktop {
-    
-    .bottom-part {
-        background-color: var(--clr-bg);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 15%;
-    }
+.bottom-part {
+    background-color: var(--clr-bg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
 }
 
 .contact-consulation-layout {

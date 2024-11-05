@@ -4,6 +4,13 @@ import FAQCard from './FAQCard';
 
 const FAQAccordion = () => {
 
+
+    const [openId, setOpenId] = useState(null);
+
+    const toggleOpen = (id) => {
+        setOpenId((prevOpenId) => (prevOpenId === id ? null : id));
+    }
+
     const [faqContent, setFaqContent] = useState([
         {
             "id": uuidv4(),
@@ -41,7 +48,7 @@ const FAQAccordion = () => {
   return (
     <div className="p6-faq-cont br-05 border-faq-cont faq-divider">
         {faqContent.map(data => (
-            <FAQCard key={data.id} data={data} />
+            <FAQCard key={data.id} data={data} isOpen={openId === data.id} toggleOpen={() => toggleOpen(data.id)}/>
         ))}
     </div>
   )

@@ -28,6 +28,14 @@
         text-transform: uppercase;
     }
 
+    a {
+        color: $Gray600;
+
+        &:hover {
+            color: $Primary;
+        }
+    }
+
     span.fs-1 {
         color: $Primary;
     }

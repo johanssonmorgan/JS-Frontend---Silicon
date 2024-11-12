@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import NavigataionLink from './NavigataionLink';
+import NavigationLink from './NavigationLink';
 import BtnPrimary from '../UI/BtnPrimary';
 import SignInIcon from '/src/assets/sign-in-icon.svg';
 import { v4 as uuidv4 } from 'uuid';
 
-const LinkList = () => {
+const LinkList = ({ addClass }) => {
 
   const [navLinks, setNavLinks] = useState([
     {
@@ -20,9 +20,9 @@ const LinkList = () => {
   ]);
 
   return (
-    <ul className="nav-links" aria-label="Navbar links">
+    <ul className={`nav-links ${addClass}`} aria-label="Navbar links">
       {navLinks.map(link => (
-        <NavigataionLink key={link.id} link={link} />
+        <NavigationLink key={link.id} link={link} />
       ))}
       <li className="sign-in">
         <BtnPrimary imageBefore={SignInIcon} altText={"user icon"} text={"Sign in / up"} />

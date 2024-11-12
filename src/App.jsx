@@ -6,6 +6,7 @@ import Features from './pages/Features'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import HeroSection from './components/HeroSection/HeroSection'
+import PageProvider from './contexts/PageProvider'
 
 
 
@@ -24,24 +25,26 @@ function App() {
 
   return (
     <>
-      <header className={locationId}>
-          <Navbar />
-        <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/contact" element={null} />
-          <Route path="/features" element={null} />
-        </Routes>
-      </header>
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/features" element={<Features />} />
-        </Routes>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+      <PageProvider>
+            <header className={locationId}>
+                <Navbar />
+              <Routes>
+                <Route path="/" element={<HeroSection />} />
+                <Route path="/contact" element={null} />
+                <Route path="/features" element={null} />
+              </Routes>
+            </header>
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/features" element={<Features />} />
+              </Routes>
+            </main>
+            <footer>
+              <Footer />
+            </footer>
+      </PageProvider>
     </>
   )
 }

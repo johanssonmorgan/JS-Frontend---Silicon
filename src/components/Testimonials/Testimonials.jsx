@@ -4,33 +4,17 @@ import ReviewCard from './ReviewCard';
 function Testimonials() {
 
     const [testimonials, setTestimonials] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
+        const data = await res.json()
+        setTestimonials(data)
+    }
 
     useEffect(() => {
-        const fetchTestimonials = async () => {
-            try {
-                setLoading(true);
-                const response = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch FAQ content');
-                }
-                const data = await response.json();
+        fetchData()
+    }, [])
 
-                const testimonial = data.map(item => ({...item}));
-                setTestimonials(testimonial);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchTestimonials();
-    }, []);
-
-    if (loading) return <p>Loading FAQs...</p>;
-    if (error) return <p>Error: {error}</p>;
 
 	return (
 		<>

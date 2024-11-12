@@ -21,7 +21,7 @@
     width: 100%;
     background-color: $White;
     font-size: 1rem;
-    color: var(--clr-Gray500);
+    color: $Gray500;
     font-weight: $fw-Regular;
     padding: 1em;
     padding-left: 2.8em;
@@ -32,7 +32,7 @@
         color: $Gray500;
     }
 
-    &:focus {
+    &:focus, &:focus-visible, &:active {
         outline: none;
         box-shadow: $dropshadow-primary;
     }

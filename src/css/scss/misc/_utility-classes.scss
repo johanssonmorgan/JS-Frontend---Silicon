@@ -102,6 +102,11 @@
 .dropshadow{
     box-shadow: $dropshadow-primary;
 }
+.dropshadow-navbar{
+    @include mobileTablet {
+        box-shadow: $dropshadow-secondary;
+    }
+}
 .border-contact {
     border: 1px solid var(--clr-GraySp-7);
     padding: 1.5rem;

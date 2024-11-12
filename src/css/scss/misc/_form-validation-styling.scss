@@ -1,0 +1,21 @@
+.invalid-input {
+    color: firebrick;
+    font-size: .9rem;
+    padding-top: .1rem;
+}
+
+.success-message {
+    color: green;
+    font-size: .9rem;
+    padding-top: .1rem;
+}
+
+.error {
+    
+    .form-input {
+        border-color: firebrick;
+    }
+    .invalid-input{
+        display: block;
+    }
+}

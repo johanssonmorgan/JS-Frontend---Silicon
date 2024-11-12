@@ -2,15 +2,7 @@
 
 .navbar {
 
-    .nav-silicon-logo {
-        grid-area: nav-logo;
-        margin-right: 2.5rem;
-    }
-
-    .nav-menu-button {
-        grid-area: nav-menu;
-    }
-
+    z-index: 1000;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -32,23 +24,63 @@
     }
 
     @include mobileTablet {
+        &.expanded {
+            background-color: var(--clr-bg-navbar);
+            transition: background 300ms ease-in-out;
+        }
+    }
+
+    .nav-silicon-logo {
+        grid-area: nav-logo;
+        margin-right: 2.5rem;
+    }
+
+    .nav-menu-button {
+        grid-area: nav-menu;
+    }
+
+    // Mobile menu
+    @include mobileTablet {
+
         .nav-links {
             position: absolute;
             top: 100%;
-            right: 1rem;
+            right: 0;
             z-index: 100;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            background-color: var(--clr-contact-form-bg);
-            padding-block: 2rem;
+
+            background-color: var(--clr-bg-navbar);
+
             padding-inline: 1rem;
-            
             border-radius: 0 0 .5em .5em;
 
-            .btn-primary {
-                margin-top: 2rem;
+            li {
+                padding-block: .5rem;
+                margin-bottom: 1rem;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: 0;
+                right: 0;
+                border: 2px solid var(--clr-bg-navbar);
+            }
+
+            &.show {
+                display: flex;
+                flex-direction: row;
+                transform: translateY(0);
+                width: 100%;
+                align-items: center;
+                justify-content: right;
+                column-gap: 3rem;
+    
+                animation: expandMenu 300ms forwards;
+
+                @include mobile {
+                    column-gap: 1rem;
+                }
             }
         }
 
@@ -60,4 +92,9 @@
             order: 3;
         }
     }
+}
+
+@keyframes expandMenu {
+    0% { transform: translateY(-200%); }
+    100% { transform: translateY(0); }
 }

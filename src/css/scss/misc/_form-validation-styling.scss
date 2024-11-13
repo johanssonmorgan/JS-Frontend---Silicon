@@ -1,21 +1,11 @@
 .invalid-input {
-    color: firebrick;
+    color: $Error;
     font-size: .9rem;
     padding-top: .1rem;
 }
 
 .success-message {
-    color: green;
+    color: $Success;
     font-size: .9rem;
     padding-top: .1rem;
-}
-
-.error {
-    
-    .form-input {
-        border-color: firebrick;
-    }
-    .invalid-input{
-        display: block;
-    }
 }

@@ -12,7 +12,7 @@ const Breadcrumb = () => {
     const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
-    <section className={`bc-${currentPage}`}>
+    <section className={`breadcrumb bc-${currentPage}`}>
         <div className="container">
             <ul className='breadcrumb'>
                 <li className='fs-1'><img src={homeIcon} alt="House icon" /><Link to="/">Homepage</Link><img src={chevrons} alt="chevrons" /></li>

@@ -11,7 +11,7 @@ const NewsletterForm = () => {
     let error = ''    
 
   if (name === 'email' && !/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(value.trim())) {
-    error = "Must be a valid email address."
+    error = "Invalid email format. Please enter an email like name@example.com."
   }
   
   setErrors(prevErrors => ({...prevErrors, [name]: error}))
@@ -21,7 +21,7 @@ const NewsletterForm = () => {
     const newErrors = {}
 
     if (!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email.trim())) {
-      newErrors.email = "Must be a valid email address."
+      newErrors.email = "Invalid email format. Please enter an email like name@example.com."
     }
 
     setErrors(newErrors)
@@ -56,7 +56,7 @@ const NewsletterForm = () => {
       if(res.ok) {
         setFormData({ email: '' });
         setErrors({});
-        setSuccess('Thank you for subscribing.');
+        setSuccess("You're in! Exciting news and updates are headed your way.");
       } else {
       const errorData = await res.json();
       setSuccess(''); 
@@ -65,7 +65,7 @@ const NewsletterForm = () => {
     }
 
     catch (error) {
-      setErrors({ email: 'Oops something went wrong!' });
+      setErrors({ email: 'Subscription failed on our end. Please try again in a few moments.' });
       setSuccess('');
     }
   };
@@ -82,7 +82,7 @@ const NewsletterForm = () => {
               <div className="form">
                 <img className="newsletter-icon" src={EnvelopeIcon} alt="Envelope icon" />
                 <label className="form-label" htmlFor="email">Email</label>
-                <input id="email" type="email" className="form-input" name="email" value={formData.email} onChange={handleInputChange} autoComplete="email" placeholder="Your Email" required />
+                <input id="email"  type="email" className="form-input" name="email" value={formData.email} onChange={handleInputChange} autoComplete="email" placeholder="Your Email" required />
                 <button className="btn-submit">Subscribe</button>
               </div>
             </div>

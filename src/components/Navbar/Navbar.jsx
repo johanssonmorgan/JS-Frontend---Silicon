@@ -6,7 +6,7 @@ import Burger from '/src/assets/mobile-menu-button.svg'
 
 const Navbar = () => {
 
-  const [expandMenu, setExpandMenu] = useState(true);
+  const [expandMenu, setExpandMenu] = useState(false);
 
   const toggleMenu = () => {
     setExpandMenu(!expandMenu);

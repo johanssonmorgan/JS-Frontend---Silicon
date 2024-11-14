@@ -1041,13 +1041,13 @@ header {
     right: 0;
     z-index: 100;
     background-color: var(--clr-bg-navbar);
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     border-radius: 0 0 0.5em 0.5em;
     transition: background 300ms ease-in-out;
   }
   .navbar .nav-links li {
     padding-block: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   .navbar .nav-links::before {
     content: "";
@@ -2237,6 +2237,12 @@ footer {
 }
 .breadcrumb span.fs-1 {
   color: #6366f2;
+}
+
+.bc-padding {
+  padding-top: 4rem;
+  padding-bottom: 0;
+  transition: padding 300ms;
 }
 
 .home {

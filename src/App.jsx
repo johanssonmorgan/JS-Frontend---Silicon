@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import HeroSection from './components/HeroSection/HeroSection'
 import PageProvider from './contexts/PageProvider'
+import NavbarStatusProvider from './contexts/navbarStatusProvider'
 
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <PageProvider>
+        <NavbarStatusProvider>
             <header className={locationId}>
                 <Navbar />
               <Routes>
@@ -44,6 +46,7 @@ function App() {
             <footer>
               <Footer />
             </footer>
+          </NavbarStatusProvider>
       </PageProvider>
     </>
   )

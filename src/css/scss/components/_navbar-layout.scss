@@ -50,14 +50,14 @@
 
             background-color: var(--clr-bg-navbar);
 
-            padding-inline: 1rem;
+            padding-inline: .5rem;
             border-radius: 0 0 .5em .5em;
 
             transition: background 300ms ease-in-out;
 
             li {
                 padding-block: .5rem;
-                margin-bottom: 1rem;
+                margin-bottom: .5rem;
             }
 
             &::before {

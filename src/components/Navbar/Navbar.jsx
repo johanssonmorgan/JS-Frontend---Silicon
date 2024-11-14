@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import LogoLink from './LogoLink'
 import LinkList from './LinkList'
 import DarkModeToggle from '../UI/DarkModeToggle'
 import Burger from '/src/assets/mobile-menu-button.svg'
+import { useNavbarStatus } from '/src/contexts/NavbarStatusProvider'
 
 const Navbar = () => {
 
-  const [expandMenu, setExpandMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setExpandMenu(!expandMenu);
-  }
+  const { expandMenu, toggleMenu } = useNavbarStatus();
 
   return (
     <nav className={`navbar container ${expandMenu ? 'expanded dropshadow-navbar' : ''}`} aria-label="Main navigation">

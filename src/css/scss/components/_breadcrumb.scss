@@ -40,3 +40,9 @@
         color: $Primary;
     }
 }
+
+.bc-padding {
+    padding-top: 4rem;
+    padding-bottom: 0;
+    transition: padding 300ms;
+}

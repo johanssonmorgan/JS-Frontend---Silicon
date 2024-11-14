@@ -41,8 +41,11 @@
     }
 }
 
-.bc-padding {
-    padding-top: 4rem;
-    padding-bottom: 0;
-    transition: padding 300ms;
+@include mobileTablet {
+    .bc-padding {
+        padding-top: 4rem;
+        padding-bottom: 0;
+        transition: padding 300ms;
+        transition-delay: 100ms;
+    }
 }
